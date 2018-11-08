@@ -1,0 +1,154 @@
+// COLORS
+$bg-color-main: white;
+$fore-color-main: #333;
+$fore-color-secondary: #666;
+$color-pinky-red: rgb(255,40,40);
+
+// FONT STYLES
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Fredericka+the+Great|Kalam');
+$font-cursive: 'Kalam', cursive;
+$font-heading: 'Alfa Slab One', monospace;
+$font-sketch: 'Fredericka the Great', Arial;
+
+// FONT SIZES
+$font-size: 16px;
+$heading-font-size: $font-size*2.2;
+
+:root {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  
+  body {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+    background-color: $bg-color-main;
+    color: $fore-color-main;
+    
+    .section-header {
+      display: flex;
+      flex-direction: row;
+      width: 90%;
+      margin: 1rem auto;
+      padding: 0;
+      justify-content: space-between;
+      .title {
+        font-family: $font-heading;
+        font-size: $heading-font-size;
+        font-weight: 300;
+      }
+      .cube-count-container {
+        display: flex;
+        font-family: $font-heading;
+        font-weight: 300;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        top: 1.5rem;
+        justify-content: flex-end;
+        .cube-title {
+          font-size: $heading-font-size * 0.7;
+          text-align: center;
+        }
+        .cube-number {
+          font-size: $heading-font-size * 1.1;
+          font-weight: 800;
+          color: $color-pinky-red;
+        }
+      }
+    }
+    
+    .wrap-main-aside {
+      display: flex;
+      flex-direction: row-reverse;
+      width: 90%;
+      margin: 0 auto;
+      
+      .section-main {
+        flex: 16;
+        display: flex;
+        flex-direction: row;
+        
+        .remarks-container {
+          display: flex;
+          align-items: center;
+          flex: 1;
+          max-width: 100%;
+          .remarks {
+            font-size: $heading-font-size*1;
+            font-family: $font-sketch;
+          }
+        }
+
+        .beverage-section {
+          .beverage-image-container {
+            position: relative;
+            #current-beverage-image {
+              width: 35rem;
+            }
+          }
+        }
+      } // end of section-main
+      
+      .section-aside {
+        flex: 5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        .beverage-select-instruction {
+          text-align: center;
+          font-family: $font-cursive;
+          color: $fore-color-secondary;
+        }
+        .social-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          .social-title {
+            text-align: center;
+            font-family: $font-heading;
+            color: $fore-color-secondary;
+          }
+          .social-btn-container {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            
+            .btn-facebook, .btn-twitter {
+              color: $bg-color-main;
+              border: none;
+              padding: 0.2rem 0.3rem;
+              border-radius: 0.2rem;
+              background-color: $fore-color-secondary;
+            }
+            .btn-facebook {
+              background-color: rgb(59, 89, 152);
+            }
+            .btn-twitter {
+              background-color: rgb(0, 132, 180);
+            }
+            .btn-facebook, .btn-twitter:hover{
+              cursor: pointer; 
+            }
+          } // end of social-btn-container
+        } // end of social-container
+      } // end of section-aside
+      
+    } // end of wrap-main-aside
+    
+    .footer {
+      width: 95%;
+      margin: 1rem auto 0rem auto;
+      display: flex;
+    }
+  } // end of body
+  
+} //end of root
+ 
