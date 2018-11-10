@@ -21,12 +21,38 @@
   <div class="wrap-main-aside">
     <main class="section-main">
       <div class="remarks-container">
-        <p class="remarks">This beast wants more!</p>
+        <p class="remarks" id="remark">This beast wants more!</p>
       </div>
       <div class="beverage-section">
-        <canvas id="main-game">
-
-        </canvas>
+        <div id="column-divs">
+          <div id="droppable"  class="dropzone">
+            <h3 class="droppable-area-text" draggable="true">drag and drop <br> the cube here</h3>
+          </div>
+          <div id="current-beverage-container">
+            <img id="main-image" src="./assets/beverages/coke.png">
+          </div>
+          <div id="play-again-div">
+            <img id="play-again-btn" src="./assets/reset button.png">
+          </div>
+        </div>
+        <div id="column-divs">
+          <div id="sugar-text-div">
+            <h3 id="sugar-text">click to pick <br> the cube</h3>
+          </div>
+            <div id="sugar-cube-div">
+              <img draggable="false" id="sugar-cubes"src="./assets/sugar-cubes.png">
+              <img id="sugar-cube"  src="./assets/single-cube.png" draggable="true">
+            </div>
+        </div>
+        <div id="column-divs">
+          <div id="thermometer-div">
+            <img id="thermometer" src="./assets/thermometer png.png">
+          </div>
+          <div id="thermometer-message">
+            <h3 id="message">Keep an eye on the <br> health risk meter</h3>
+          </div>
+        </div>
+        
       </div>
     </main>
     <aside class="section-aside">
