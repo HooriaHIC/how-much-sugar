@@ -42,26 +42,133 @@
       width: 90%;
       margin: 0 auto; }
       :root body .wrap-main-aside .section-main {
-        flex: 16;
+        flex: 26;
         display: flex;
         flex-direction: row; }
         :root body .wrap-main-aside .section-main .remarks-container {
           display: flex;
           align-items: center;
-          flex: 1;
+          justify-content: center;
+          flex: 1.5;
           max-width: 100%; }
           :root body .wrap-main-aside .section-main .remarks-container .remarks {
             font-size: 35.2px;
             font-family: "Fredericka the Great", Arial; }
-        :root body .wrap-main-aside .section-main .beverage-section .beverage-image-container {
-          position: relative; }
-          :root body .wrap-main-aside .section-main .beverage-section .beverage-image-container #current-beverage-image {
-            width: 35rem; }
+        :root body .wrap-main-aside .section-main .beverage-section {
+          display: flex;
+          flex-direction: row;
+          flex: 6; }
+          :root body .wrap-main-aside .section-main .beverage-section #column-divs {
+            margin-top: -5%;
+            margin-left: 10%;
+            display: flex;
+            flex-direction: column; }
+            :root body .wrap-main-aside .section-main .beverage-section #column-divs #droppable {
+              flex: 1;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-direction: row;
+              margin-left: 15%; }
+              :root body .wrap-main-aside .section-main .beverage-section #column-divs #droppable .droppable-area-text {
+                text-align: center;
+                font-family: "Kalam", cursive;
+                color: #666; }
+            :root body .wrap-main-aside .section-main .beverage-section #column-divs #current-beverage-container {
+              flex: 2.5;
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              padding-left: 16%; }
+              :root body .wrap-main-aside .section-main .beverage-section #column-divs #current-beverage-container #main-image {
+                height: 300px; }
+            :root body .wrap-main-aside .section-main .beverage-section #column-divs #play-again-div {
+              display: flex;
+              flex-direction: column;
+              flex: 1;
+              align-items: center;
+              justify-content: center; }
+              :root body .wrap-main-aside .section-main .beverage-section #column-divs #play-again-div #play-again-btn {
+                display: flex;
+                flex: 1;
+                margin-left: 20%;
+                flex-direction: column;
+                height: 100px;
+                width: 150px; }
+          :root body .wrap-main-aside .section-main .beverage-section #sugar-text-div {
+            display: flex;
+            width: 200px;
+            height: 130px;
+            margin-top: 100%;
+            margin-left: 40%;
+            flex-direction: column; }
+            :root body .wrap-main-aside .section-main .beverage-section #sugar-text-div #sugar-text {
+              text-align: center;
+              font-family: "Kalam", cursive;
+              color: #666; }
+          :root body .wrap-main-aside .section-main .beverage-section #sugar-cube-div {
+            display: flex;
+            flex-direction: row;
+            flex: 1.5;
+            position: relative; }
+            :root body .wrap-main-aside .section-main .beverage-section #sugar-cube-div #sugar-cube {
+              margin-top: -20%;
+              margin-left: 24%;
+              height: 80px; }
+            :root body .wrap-main-aside .section-main .beverage-section #sugar-cube-div #sugar-cube:hover {
+              cursor: pointer; }
+            :root body .wrap-main-aside .section-main .beverage-section #sugar-cube-div #sugar-cube, :root body .wrap-main-aside .section-main .beverage-section #sugar-cube-div #sugar-cubes {
+              position: absolute; }
+            :root body .wrap-main-aside .section-main .beverage-section #sugar-cube-div #sugar-cubes {
+              margin-top: -20%;
+              height: 150px; }
+          :root body .wrap-main-aside .section-main .beverage-section #thermometer-div {
+            flex: 2;
+            display: flex;
+            flex-direction: row; }
+            :root body .wrap-main-aside .section-main .beverage-section #thermometer-div #thermometer {
+              background-color: red;
+              height: 320px;
+              margin-top: 50%;
+              margin-left: 40%; }
+          :root body .wrap-main-aside .section-main .beverage-section #thermometer-message {
+            display: flex;
+            margin-left: 20%;
+            width: 200px;
+            flex-direction: column; }
+            :root body .wrap-main-aside .section-main .beverage-section #thermometer-message #message {
+              text-align: center;
+              font-family: "Kalam", cursive;
+              color: #666; }
       :root body .wrap-main-aside .section-aside {
-        flex: 5;
+        flex: 4;
         display: flex;
         flex-direction: column;
         align-items: center; }
+        :root body .wrap-main-aside .section-aside .beverage-select-container {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          column-gap: 0.5rem;
+          row-gap: 0.3rem; }
+          :root body .wrap-main-aside .section-aside .beverage-select-container .beverage-item-button {
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            background-color: transparent;
+            box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.05);
+            overflow: hidden; }
+            :root body .wrap-main-aside .section-aside .beverage-select-container .beverage-item-button img {
+              width: 40px; }
+          :root body .wrap-main-aside .section-aside .beverage-select-container .beverage-item-button:active {
+            transition-duration: 500ms;
+            transform: scale(1.2); }
+          :root body .wrap-main-aside .section-aside .beverage-select-container .beverage-item-button:focus {
+            outline: none; }
+          :root body .wrap-main-aside .section-aside .beverage-select-container .beverage-item-button:hover {
+            cursor: pointer; }
         :root body .wrap-main-aside .section-aside .beverage-select-instruction {
           text-align: center;
           font-family: "Kalam", cursive;
@@ -74,6 +181,7 @@
           :root body .wrap-main-aside .section-aside .social-container .social-title {
             text-align: center;
             font-family: "Alfa Slab One", monospace;
+            font-weight: 200;
             color: #666; }
           :root body .wrap-main-aside .section-aside .social-container .social-btn-container {
             width: 100%;
